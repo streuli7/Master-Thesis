@@ -44,11 +44,13 @@ RANDOM_STATE    = 42
 
 # Tuned HDBSCAN hyperparameters
 TUNED_PARAMS = {
-    'min_cluster_size': 100,
-    'min_samples': 100,
-    'eps': 0.02799882442598489,
+    'min_cluster_size': 145,
+    'min_samples': 122,
+    'eps': 0.003870038703952909,
     'cluster_selection_method': 'leaf',
-    'metric': 'correlation'
+    'metric': 'correlation',
+    'use_spatial': True,
+    'use_pca': True
 }
 
 warnings.filterwarnings("ignore")
