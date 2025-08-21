@@ -176,7 +176,7 @@ def run_ensemble(X, y, mcs, ms, eps, method, metric, k=ENSEMBLE_K):
 
 # ---------- Optuna Objective ---------- #
 def objective(trial, X, y):
-    mcs    = trial.suggest_int('min_cluster_size', 5, 100, step=5)
+    mcs    = trial.suggest_int('min_cluster_size', 5, 150, step=5)
     ms     = trial.suggest_int('min_samples', 1, mcs)
     eps    = trial.suggest_float('cluster_selection_epsilon', 1e-3, 1e-1, log=True)
     method = trial.suggest_categorical('cluster_selection_method', ['eom', 'leaf'])
